@@ -1,2 +1,4 @@
 build/
 *.elf
+*.extracted
+limine-binary.tar.gz
