@@ -49,8 +49,6 @@ OBJECTS := $(patsubst $(SOURCE_DIR)/%.c,$(BUILD_DIR)/%.o,$(SOURCES))
 
 DEPS := $(OBJECTS:.o=.d)
 
--include $(DEPS)
-
 .PHONY: all clean
 
 all: $(TARGET)
@@ -66,3 +64,5 @@ $(TARGET): $(OBJECTS) linker.ld
 
 clean:
 	rm -rf $(BUILD_DIR) $(TARGET)
+
+-include $(DEPS)
